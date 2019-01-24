@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.rus,
+.eng,
+.bel {
+  display: none;
+}
+
+body {
+  &.ru {
+    .rus {
+      display: block;
+    }
+    span.rus {
+      display: inline;
+    }
+  }
+  &.en {
+    .eng {
+      display: block;
+    }
+    span.eng {
+      display: inline;
+    }
+  }
+  &.by {
+    .bel {
+      display: block;
+    }
+    span.bel {
+      display: inline;
+    }
+  }
+}
+
+.language-switch {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  padding: 5px;
+  background: grey;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }    
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 10px 10px 30px 10px;
+  border-bottom: 1px dotted #AAA;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px;
+
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    &:last-of-type {
+      .timeline-info{
+        padding-bottom: 10px;
+      }
+    }
+
+    .timeline-date {
+      padding: 5px 20px;
+      margin-top: 0.5em;
+      margin-right: 20px;
+      border-radius: 3px;
+      background-color: cornflowerblue;
+      color: #FFF;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top: 10px solid cornflowerblue;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4px;
+        right: -24px;
+        width: 5px;
+        height: 5px;
+        background-color: #FFF;
+        border: 2px solid cornflowerblue;
+        border-radius: 100%;
+      }
+    }
+    .timeline-divider {
+      width: 1px;
+      align-self: stretch;
+      border-left: 1px dashed grey;
+    }
+    .timeline-info {
+      margin-left: 20px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.list-of-works {
+  .list-of-works-year {
+    font-weight: bold;
+    &::after {
+      content: " ......";
+    }
+  }
+}
+
+.photos {
+  display: flex;
+  figure {
+    margin: 10px;
+    img {
+      max-width: 300px;
+      max-height: 200px;
+    }
+  }
+}
+
+.mapouter {
+  text-align:right;
+  height:300px;
+  //width:600px;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:300px;
+  //width:600px;
+  border: 1px solid grey;
+  iframe {
+    width: 100%;
+    border: none;
+  }
+}
