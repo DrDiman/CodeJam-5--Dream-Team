@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rus,
+.eng,
+.bel {
+  display: none;
+}
+
+body.ru .rus {
+  display: block;
+}
+
+body.en .eng {
+  display: block;
+}
+
+body.by .bel {
+  display: block;
+}
+
+.language-switch {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  padding: 5px;
+  background: grey;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 25px;
+  background-color: rgb(255, 255, 204)
+}
+
+.header {
+  display: grid;
+  min-height: 50px;
+  background-color: aquamarine;
+  justify-items: center;
+  align-items: center
+}
+
+.mainTitle {
+  background-color: blueviolet
+}
+
+.mainContent {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "description description random"
+    "authors     authors     authors";
+    background-color: rgb(138, 0, 0);
+}
+
+.description {
+  grid-area: description;
+  padding: 10px;
+  display: grid;
+  align-content: start;
+  background-color: rgb(253, 203, 203);
+}
+
+.description_title{
+  text-align: center
+}
+
+.description_text{
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.main_button {
+justify-self: center;
+display: block;
+padding: 10px;
+background-color: red;
+text-transform: uppercase;
+font-size: 20px;
+}
+
+.random {
+  grid-area: random;
+  padding: 10px;
+  background-color: rgb(208, 255, 121);
+}
+
+.random_director {
+  text-align: center
+}
+
+.authors {
+  grid-area: authors;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.authors_title {
+  text-align: center
+}
+
+.authors_wrapContainer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+}
+
+.author {
+  display: grid;
+  justify-items: center;
+  background-color: rgb(43, 168, 64);
+}
+
+.author_info {
+  display: grid;
+  justify-items: center;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  padding: 10px;
+  background-color: brown;
+}
+
+@media (max-width: 700px) {
+  .mainContent {
+    grid-template-areas:
+      "description"
+      "random"
+      "authors"
+  }
+}
