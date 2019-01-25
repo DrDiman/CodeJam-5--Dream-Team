@@ -8,6 +8,9 @@
 .bel {
   display: none;
 }
+body {
+  background-color: #aaa;
+}
 body.ru .rus {
   display: block;
 }
@@ -25,6 +28,13 @@ body.by .bel {
 }
 body.by span.bel {
   display: inline;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #FFF;
 }
 .language-switch {
   position: absolute;
