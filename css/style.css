@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+    transition-duration: 0.2s;
+  }
+  .rus,
+  .eng,
+  .bel {
+    display: none;
+  }
+
+  body{
+    background: radial-gradient(circle at right, rgba(233, 241, 223, 0) 0.3333333333em, #E9F1DF 0.3333333333em, #E9F1DF 0.4888888889em, rgba(233, 241, 223, 0) 0.4888888889em, rgba(233, 241, 223, 0) 0.8222222222em, #E9F1DF 0.8222222222em, #E9F1DF 0.9777777778em, rgba(233, 241, 223, 0) 0.9777777778em, rgba(233, 241, 223, 0) 1.3111111111em, #E9F1DF 1.3111111111em, #E9F1DF 1.4666666667em, rgba(233, 241, 223, 0) 1.4666666667em) 0 0, radial-gradient(circle at left, rgba(233, 241, 223, 0) 0.5777777778em, #E9F1DF 0.5777777778em, #E9F1DF 0.7333333333em, rgba(233, 241, 223, 0) 0.7333333333em, rgba(233, 241, 223, 0) 1.0666666667em, #E9F1DF 1.0666666667em, #E9F1DF 1.2222222222em, rgba(233, 241, 223, 0) 1.2222222222em) 0 3.0514619883em, linear-gradient(to right top, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to left top, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to right bottom, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to left bottom, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em;
+    background-size: 2.8em 2.8em;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  
+  main{
+    flex: 1;
+  }
+
+  body.ru .rus {
+    display: block;
+  }
+  body.ru span.rus {
+    display: inline;
+  }
+  body.en .eng {
+    display: block;
+  }
+  body.en span.eng {
+    display: inline;
+  }
+  body.by .bel {
+    display: block;
+  }
+  body.by span.bel {
+    display: inline;
+  }
+  .language-switch {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    padding: 5px;
+    background: grey;
+  }
+  h1 {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+  }
+
+   h1 {
+    position: relative;
+    color: #FCF2E5;
+    background: rgb(44, 56, 73);
+    font-size: 2.0em;
+    font-weight: normal;
+    padding: 10px 40px;
+    margin: 0 auto;
+    max-width: 450px;
+    border-radius: 0px 0px 25px 25px;
+    line-height: 1;
+  }
+  
+   h1:before {
+    content: ""; 
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -15px;  
+    background: rgb(44, 56, 73);
+  }
+   h1:after {
+    content: ""; 
+    position: absolute;
+    height: 0;
+    width: 80%;
+    border-top: 8px solid rgb(44, 56, 73);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    left: 50%;
+    border-radius: 0px 0px 25px 25px;
+    transform: translateX(-50%);
+    bottom: -25px;
+  }
+
+  header {
+    height: 50px;
+    background-color: black;
+  }
+
+    form {
+      width: 300px;
+      position: relative;
+      margin: 0 auto;
+      background: #F9F0DA;
+      border-bottom: 4px solid #be290e;
+    }
+
+   form input, button {
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+   form input {
+      width: calc(100%-15px);
+      height: 42px;
+      padding-left: 15px;
+      border-radius: 0px 0px 25px 25x;
+    }
+   form button {
+      height: 42px;
+      width: 42px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .cards {
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      padding: 1.5%;
+      box-sizing: border-box;
+    }
+    
+    .card {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 30px;
+      background: #fefff9;
+      color: #363636;
+      text-decoration: none;
+      box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+      border-radius: 4px;
+    }
+    @media (max-width: 700px) {
+      .card {
+        width: 100%;
+      }
+    }
+    @media (min-width: 700px) {
+      .card {
+        max-width: 320px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      .card:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 980px) {
+      .card:nth-child(even) {
+        margin-right: 20px;
+      }
+      .card:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    .card span {
+      display: block;
+    }
+    .card .card-summary {
+      padding: 5% 5% 3% 5%;
+    }
+    .card .card-header {
+      position: relative;
+      height: 175px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(255, 255, 255, 0.15);
+      background-blend-mode: overlay;
+      border-radius: 4px 4px 0 0;
+    }
+    .card .card-header:hover, .card .card-header:focus {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .card .card-title {
+      background: rgba(44, 56, 73, 0.85);
+      padding: 3.5% 0 2.5% 0;
+      color: white;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .card .card-title h3 {
+      font-size: 1.2em;
+      line-height: 1.2;
+      padding: 0 3.5%;
+      margin: 0;
+    }
+    .card .card-meta {
+      max-height: 0;
+      overflow: hidden;
+      color: #666;
+      font-size: .78em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 5%;
+      padding: 0 5%;
+      transition-property: max-height;
+      transition-duration: 0.4s;
+      transition-timing-function: ease-in-out;
+    }
+    .card:hover, .card:focus {
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+    }
+    .card:hover .card-title, .card:focus .card-title {
+      background: rgba(157, 187, 63, 0.95);
+    }
+    .card:hover .card-meta, .card:focus .card-meta {
+      max-height: 1em;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+    
+    footer{
+     flex: 0 0 auto;
+     background-color: black;
+     height: 90px;
+    }
