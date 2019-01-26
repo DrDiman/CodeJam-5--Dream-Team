@@ -159,11 +159,15 @@
         <span class="bel">Вiдэа</span>
       </h2>
 
-      <div id="video-gallery">
-          <a href="https://www.youtube.com/watch?v=8KwWjTs5ffk" >
-              <img src="../images/belousov_mult.jpeg" />
-          </a>
-        </div>
+      <div>
+        <ul id="video-gallery">
+          <li class="video" data-src="http://www.youtube.com/embed/8KwWjTs5ffk">
+            <a href="">
+                <img src="../images/belousov_mult.jpeg" />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       
     </section>
@@ -214,6 +218,8 @@
   </script>
 
 <script src="../lightgallery/js/lightgallery.min.js"></script>
+<script src="../lightgallery/js/lg-thumbnail.js"></script>
+<script src="../lightgallery/js/lg-video.js"></script>
 <script>
   lightGallery(document.getElementById('lightgallery'));
   lightGallery(document.getElementById('video-gallery'));
