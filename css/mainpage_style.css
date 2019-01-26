@@ -58,9 +58,8 @@ body.by .bel {
 }
 
 .language-switch {
-  position: absolute;
-  top: 5px;
-  right: 0;
+  justify-self: start;
+  margin-left: 20px;
   padding: 5px;
   background: grey;
 }
@@ -73,6 +72,7 @@ body.by .bel {
 
 .header {
   display: grid;
+  grid-template-columns: 20% 60% 20%;
   min-height: 50px;
   background-color: aquamarine;
   justify-items: center;
@@ -80,7 +80,7 @@ body.by .bel {
 }
 
 .mainTitle {
-  background-color: blueviolet
+  background-color: blueviolet;
 }
 
 .mainContent {
@@ -170,4 +170,12 @@ font-size: 20px;
       "random"
       "authors"
   }
+}
+.nav{
+  display: flex;
+  justify-self: end;
+
+}
+.nav a{
+  margin-right: 20px;
 }
