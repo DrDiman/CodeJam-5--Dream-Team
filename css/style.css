@@ -194,10 +194,6 @@ header {
   }
 }
 
-.card span {
-  display: block;
-}
-
 .card .card-summary {
   padding: 5% 5% 3% 5%;
 }
