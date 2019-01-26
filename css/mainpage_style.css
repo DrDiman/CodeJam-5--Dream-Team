@@ -65,7 +65,6 @@ body.by .bel {
 .language-switch {
   grid-area: language;
   margin-left: 20px;
-  padding: 5px;
   background: grey;
 }
 
