@@ -81,6 +81,7 @@ h1 {
   max-width: 450px;
   border-radius: 0px 0px 25px 25px;
   line-height: 1;
+  text-align: center;
 }
 
 h1:before {
@@ -160,6 +161,8 @@ header {
 .card {
   position: relative;
   margin-bottom: 20px;
+  margin-right: 30px;
+  width: 300px;
   padding-bottom: 30px;
   background: #fefff9;
   color: #363636;
@@ -167,7 +170,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
   border-radius: 4px;
 }
-
+/*
 @media (max-width: 700px) {
   .card {
     width: 100%;
@@ -193,9 +196,9 @@ header {
     margin-right: 0;
   }
 }
-
+*/
 .card .card-summary {
-  padding: 5% 5% 3% 5%;
+  padding: 5px;
 }
 
 .card .card-header {
@@ -215,7 +218,7 @@ header {
 }
 
 .card .card-title {
-  background: rgba(44, 56, 73, 0.85);
+  background-color: rgba(44, 56, 73, 0.85);
   padding: 3.5% 0 2.5% 0;
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
@@ -232,6 +235,8 @@ header {
 
 .card h3 a {
   color: white;
+  height: 100%;
+  padding: 10px;
 }
 
 .card:hover, .card:focus {
@@ -240,7 +245,7 @@ header {
 }
 
 .card:hover .card-title, .card:focus .card-title {
-  background: rgba(157, 187, 63, 0.95);
+  background-color: rgba(157, 187, 63, 0.95);
 }
 
 .card:hover .card-meta, .card:focus .card-meta {
