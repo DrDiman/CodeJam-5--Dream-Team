@@ -16,13 +16,16 @@ function chooseLang(e) {
     localStorage.setItem('currentLang', 'eng');
     e.target.parentNode.className = "language-switch eng";
     body.className = 'en';
+    changeAuthorOfdayLang('en');
   } else if (e.target.classList.contains('eng')) {
     localStorage.setItem('currentLang', 'bel');
     e.target.parentNode.className = "language-switch bel"
     body.className = 'by';
+    changeAuthorOfdayLang('by');
   } else if (e.target.classList.contains('bel')) {
     localStorage.setItem('currentLang', 'rus');
     e.target.parentNode.className = "language-switch rus"
     body.className = 'ru';
+    changeAuthorOfdayLang('ru');
   }
 }
