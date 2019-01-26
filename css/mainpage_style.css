@@ -1,11 +1,9 @@
-
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
+html, body {
+  height: 100%;
 }
 
 body {
@@ -14,34 +12,25 @@ body {
   font-size: 15px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote {
-    margin: 0;
+h1, h2, h3, h4, h5, h6, p, figure, blockquote {
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 img {
   max-width: 100%;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.rus,
-.eng,
-.bel {
+.rus, .eng, .bel {
   display: none;
 }
 
@@ -57,13 +46,6 @@ body.by .bel {
   display: block;
 }
 
-.language-switch {
-  justify-self: start;
-  margin-left: 20px;
-  padding: 5px;
-  background: grey;
-}
-
 .wrapper {
   display: grid;
   grid-gap: 25px;
@@ -72,24 +54,38 @@ body.by .bel {
 
 .header {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "language title navigation";
   min-height: 50px;
   background-color: aquamarine;
+  justify-content: space-between;
   justify-items: center;
   align-items: center
 }
 
+.language-switch {
+  grid-area: language;
+  margin-left: 20px;
+  padding: 5px;
+  background: grey;
+}
+
 .mainTitle {
+  grid-area: title;
   background-color: blueviolet;
+}
+
+.nav {
+  grid-area: navigation;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .mainContent {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas:
-    "description description random"
-    "authors     authors     authors";
-    background-color: rgb(138, 0, 0);
+  grid-template-areas: "description description random" "authors     authors     authors";
+  background-color: rgb(138, 0, 0);
 }
 
 .description {
@@ -100,23 +96,23 @@ body.by .bel {
   background-color: rgb(253, 203, 203);
 }
 
-.description_title{
+.description_title {
   text-align: center
 }
 
-.description_text{
+.description_text {
   padding: 10px;
   text-align: justify;
   font-size: 20px;
 }
 
 .main_button {
-justify-self: center;
-display: block;
-padding: 10px;
-background-color: red;
-text-transform: uppercase;
-font-size: 20px;
+  justify-self: center;
+  display: block;
+  padding: 10px;
+  background-color: red;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .random {
@@ -164,18 +160,11 @@ font-size: 20px;
 }
 
 @media (max-width: 700px) {
-  .mainContent {
-    grid-template-areas:
-      "description"
-      "random"
-      "authors"
+  .header {
+    grid-template-areas: "language" "title" "navigation";
+    justify-content: center;
   }
-}
-.nav{
-  display: flex;
-  justify-self: end;
-
-}
-.nav a{
-  margin-right: 20px;
+  .mainContent {
+    grid-template-areas: "description" "random" "authors"
+  }
 }
