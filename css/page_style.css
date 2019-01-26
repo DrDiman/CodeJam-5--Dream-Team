@@ -36,7 +36,25 @@ body.by span.bel {
   margin: auto;
   background-color: #FFF;
 }
-.language-switch {
+nav {
+  width: 100%;
+  background: #2c3849;
+}
+nav .back-to-list {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #FFF;
+  text-decoration: none;
+  transition: 0.5s;
+}
+nav .back-to-list:hover {
+  text-shadow: 0 0 15px #FFF;
+  letter-spacing: 1px;
+}
+nav .back-to-list::before {
+  content: "<<";
+}
+nav .language-switch {
   position: absolute;
   top: 5px;
   right: 0;
@@ -53,6 +71,9 @@ h1 img {
   height: 100px;
   border-radius: 100%;
   object-fit: cover;
+}
+.subtitle {
+  margin: 0 10px;
 }
 section {
   margin-bottom: 30px;
@@ -75,8 +96,27 @@ section {
 .timeline-container .timeline-item:last-of-type .timeline-info {
   padding-bottom: 10px;
 }
+.timeline-container .timeline-item:nth-of-type(2) .timeline-date {
+  background-color: deeppink;
+}
+.timeline-container .timeline-item:nth-of-type(2) .timeline-date::before {
+  border-top: 10px solid deeppink;
+}
+.timeline-container .timeline-item:nth-of-type(2) .timeline-date::after {
+  border: 2px solid deeppink;
+}
+.timeline-container .timeline-item:nth-of-type(3) .timeline-date {
+  background-color: limegreen;
+}
+.timeline-container .timeline-item:nth-of-type(3) .timeline-date::before {
+  border-top: 10px solid limegreen;
+}
+.timeline-container .timeline-item:nth-of-type(3) .timeline-date::after {
+  border: 2px solid limegreen;
+}
 .timeline-container .timeline-item .timeline-date {
   padding: 5px 1vw;
+  min-width: 100px;
   margin-top: 0.5em;
   margin-right: 20px;
   border-radius: 3px;
@@ -114,7 +154,10 @@ section {
 }
 .timeline-container .timeline-item .timeline-info {
   margin-left: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+}
+.list-of-works {
+  list-style: none;
 }
 .list-of-works .list-of-works-year {
   font-weight: bold;
