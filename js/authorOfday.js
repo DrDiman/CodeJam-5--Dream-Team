@@ -56,7 +56,7 @@ const directorsLinks = [
   '#'
 ]
 
-const random_index = Math.floor(Math.random() * (directorsListRu.length - 1));
+const random_index = Math.floor(Math.random() * directorsListRu.length);
 const director = document.querySelector('.random_director');
 const directorImg = document.querySelector('.author img');
 const directorLink = document.querySelector('.author a');
