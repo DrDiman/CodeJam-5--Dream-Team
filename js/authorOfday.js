@@ -1,4 +1,5 @@
 const pathToImages = 'images/';
+const pathToPages = 'personal_pages/';
 
 const directorsListRu = [
   'Владимир Александрович Орлов',
@@ -44,6 +45,17 @@ const directorsImgs = [
   'Veinerovich'
 ]
 
+const directorsLinks = [
+  '#',
+  '#',
+  '#',
+  '#',
+  'belousov.html',
+  '#',
+  '#',
+  '#'
+]
+
 const random_index = Math.floor(Math.random() * (directorsListRu.length - 1));
 const director = document.querySelector('.random_director');
 const directorImg = document.querySelector('.author img');
@@ -51,7 +63,7 @@ const directorLink = document.querySelector('.author a');
 
 director.textContent = directorsListRu[random_index];
 directorImg.setAttribute('src', `${pathToImages}${directorsImgs[random_index]}.png`);
-directorLink.setAttribute('href', `#`);
+directorLink.setAttribute('href', `${pathToPages}${directorsLinks[random_index]}`);
 
 function changeAuthorOfdayLang(lang){
   switch (lang) {
