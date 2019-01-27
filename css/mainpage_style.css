@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p, figure, blockquote {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 img {
@@ -67,9 +68,7 @@ body.by span.bel {
 
 .header {
   display: grid;
-  grid-template-areas:
-  "title      title title"
-  "navigation . language";
+  grid-template-areas: "title      title title" "navigation . language";
   min-height: 50px;
   justify-content: space-between;
   justify-items: center;
@@ -79,10 +78,19 @@ body.by span.bel {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.nav_authors, .nav_directors, .language-switch {
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+  cursor: pointer;
+}
+
 .language-switch {
   grid-area: language;
-  margin-left: 20px;
-  background: grey;
 }
 
 .mainTitle {
@@ -92,6 +100,7 @@ body.by span.bel {
   background: rgb(44, 56, 73);
   font-size: 2.0em;
   font-weight: normal;
+  text-align: center;
   padding: 10px 40px;
   border-radius: 0px 0px 25px 25px;
 }
@@ -130,9 +139,7 @@ body.by span.bel {
 .mainContent {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas:
-  "description description random"
-  "authors     authors     authors";
+  grid-template-areas: "description description random" "authors     authors     authors";
 }
 
 .description {
@@ -160,9 +167,17 @@ body.by span.bel {
   justify-self: center;
   display: block;
   padding: 10px;
-  background-color: red;
   text-transform: uppercase;
   font-size: 20px;
+  background: rgb(44, 56, 73);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+}
+
+.main_button:hover, .nav_authors:hover, .nav_directors:hover, .language-switch:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 12px 0px;
 }
 
 .random {
@@ -181,7 +196,15 @@ body.by span.bel {
 }
 
 .random_moreInfo {
-  background-color: red;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: end;
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 3px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
 }
 
 .random:hover, .description:hover {
@@ -213,10 +236,11 @@ body.by span.bel {
   justify-items: center;
   padding: 10px;
 }
+
 .author:hover {
-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
-border-radius: 4px;
-background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .author_avatar {
@@ -232,6 +256,7 @@ background-color: rgba(255, 255, 255, 0.8);
   font-size: 25px;
   color: black;
 }
+
 .author:hover .fa-github {
   color: #6f42c1;
 }
@@ -245,18 +270,12 @@ background-color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-
 @media (max-width: 700px) {
   .header {
-    grid-template-areas:
-     "navigation language"
-     "title title";
+    grid-template-areas: "navigation language" "title title";
     justify-content: center;
   }
   .mainContent {
-    grid-template-areas:
-    "description"
-    "random"
-    "authors"
+    grid-template-areas: "description" "random" "authors"
   }
 }
