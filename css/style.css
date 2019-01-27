@@ -69,7 +69,7 @@ body.by span.bel {
 
 .header {
   display: grid;
-  grid-template-areas: "title      title title" "navigation . language";
+  grid-template-areas: "title  title title" "navigation . language";
   min-height: 50px;
   justify-content: space-between;
   justify-items: center;
@@ -103,7 +103,6 @@ body.by span.bel {
 
 .language-switch {
   grid-area: language;
-  padding: 0;
 }
 
 .language-switch p {

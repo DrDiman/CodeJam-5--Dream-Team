@@ -15,7 +15,16 @@
   </head>
 
   <body class="ru">
-    <header>
+    <div class="wrapper">
+    <header class="header">
+        <h1 class="rus mainTitle">Кинорежисеры Беларуси</h1>
+        <h1 class="eng mainTitle">Belorussian Movie Directors</h1>
+        <h1 class="bel mainTitle">Кінарэжысёры Беларусі</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav_main eng">Main</a>
+            <a href="index.html" class="nav_main bel">Галоўная</a>
+            <a href="index.html" class="nav_main rus">Главная</a>
+          </nav>
         <div class="language-switch">
             <span class="rus">Русский</span>
             <span class="eng">English</span>
@@ -25,9 +34,6 @@
 
     <main>
       <section>
-        <h1 class="rus">Кинорежисеры Беларуси</h1>
-        <h1 class="eng">Belorussian Movie Directors</h1>
-        <h1 class="bel">Кінарэжысёры Беларусі</h1>
         <div class="container" id="cards">
           <div class="form">
             <input class="search" placeholder="Search" />
@@ -122,8 +128,11 @@
         </div>
       </section>
     </main>
-    <footer></footer>
-
+    <footer class="footer">
+        <h2 class="footer_title">The Rolling Scopes School</h2>
+        <span class="date">2019</span>
+      </footer>
+    </div>
     <script src="./js/list.js"></script>
     <script src="./js/index.js"></script>
   </body>
