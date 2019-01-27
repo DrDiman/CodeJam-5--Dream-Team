@@ -57,9 +57,9 @@ const directorsLinks = [
 ]
 
 const random_index = Math.floor(Math.random() * directorsListRu.length);
-const director = document.querySelector('.random_director');
-const directorImg = document.querySelector('.author img');
-const directorLink = document.querySelector('.author a');
+const director = document.querySelector('.random_director-title');
+const directorImg = document.querySelector('.random img');
+const directorLink = document.querySelector('.random a');
 
 director.textContent = directorsListRu[random_index];
 directorImg.setAttribute('src', `${pathToImages}${directorsImgs[random_index]}.png`);
