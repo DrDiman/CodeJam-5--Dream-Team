@@ -37,6 +37,7 @@ body.by span.bel {
   margin: auto;
   background-color: #FFF;
   border: 1px solid #DDD;
+  box-sizing: border-box;
 }
 nav {
   width: 100%;
