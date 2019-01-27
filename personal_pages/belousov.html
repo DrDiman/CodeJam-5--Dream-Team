@@ -19,7 +19,11 @@
         <span class="eng">To List</span>
         <span class="bel">Да спiску</span>
       </a>
-      <div class="language-switch rus">Русский</div>
+      <div class="language-switch">
+        <span class="rus">Русский</span>
+        <span class="eng">English</span>
+        <span class="bel">Беларускi</span>
+      </div>
     </nav>
   </header>
 
@@ -159,11 +163,15 @@
         <span class="bel">Вiдэа</span>
       </h2>
 
-      <div id="video-gallery">
-          <a href="https://www.youtube.com/watch?v=8KwWjTs5ffk" >
-              <img src="../images/belousov_mult.jpeg" />
-          </a>
-        </div>
+      <div>
+        <ul id="video-gallery">
+          <li class="video" data-src="http://www.youtube.com/embed/8KwWjTs5ffk">
+            <a href="">
+                <img src="../images/belousov_mult.jpeg" />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       
     </section>
@@ -181,39 +189,18 @@
         </div>
       </div>
     </section>
+  
 
   </main>
   <footer></footer>
 
 </div>
 
-  <script>
-    let lang = document.querySelector('.language-switch');
-    lang.addEventListener('click', chooseLang);
-
-    function chooseLang(e){
-      let body = document.body;
-      if(e.target.classList.contains('rus')){
-        e.target.classList.toggle('rus');
-        e.target.classList.toggle('eng');
-        e.target.textContent = 'English';
-        body.className = 'en';
-      } else if(e.target.classList.contains('eng')){
-        e.target.classList.toggle('eng');
-        e.target.classList.toggle('bel');
-        e.target.textContent = 'Беларуская';
-        body.className = 'by';
-      } else if(e.target.classList.contains('bel')){
-        e.target.classList.toggle('bel');
-        e.target.classList.toggle('rus');
-        e.target.textContent = 'Русский';
-        body.className = 'ru';
-      }
-    }
-
-  </script>
+<script src="../js/index.js"></script>
 
 <script src="../lightgallery/js/lightgallery.min.js"></script>
+<script src="../lightgallery/js/lg-thumbnail.js"></script>
+<script src="../lightgallery/js/lg-video.js"></script>
 <script>
   lightGallery(document.getElementById('lightgallery'));
   lightGallery(document.getElementById('video-gallery'));

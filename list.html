@@ -1,132 +1,129 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Список режисеров</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-</head>
-
-<body class="ru">
+  <body class="ru">
     <header>
-        <div class="language-switch rus">Русский</div>
+        <div class="language-switch">
+            <span class="rus">Русский</span>
+            <span class="eng">English</span>
+            <span class="bel">Беларускi</span>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h1>Кинорежисеры Беларуси</h1>
-            <form>
-                <input type="text" placeholder="Искать здесь...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-            <div class="container">
-                    <div class="cards">
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Orlov.png); background-size: contain;">
-                                <span class="card-title">
-                                    <h3>Владимир Александрович Орлов</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                Родился в 1938 
-                                в городе Гродно
-                            </span>
-                        </a>
-                
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/A-lobach.png);">
-                                <span class="card-title">
-                                    <h3>Артем Лобач Александрович</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родился в 1987
-                                    в городе Борисов
-                            </span>
-                        </a>
-                
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Arshanski.png);">
-                                <span class="card-title">
-                                    <h3>Эдуард Львович Аршанский</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                Родился в 1899 
-                                в городе Невель   
-                            </span>
-                        </a>
-                        
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Victor_Asliuk.png);">
-                                <span class="card-title">
-                                    <h3>Виктор Николаевич Аслюк</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родился в 1961
-                                    в городе Минск   
-                            </span>
-
-                        </a>
-                        
-                        <a class="card" href="personal_pages/belousov.html">
-                            <span class="card-header" style="background-image: url(images/Belous.png);">
-                                <span class="card-title">
-                                    <h3>Белоусов Олег Павлович</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родился в 1945
-                                    в городе Слуцк   
-                            </span>
-
-                        </a>
-                
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Berov.png);">
-                                <span class="card-title">
-                                    <h3>Моисей Залманович Беров</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родисля в 1909
-                                    в городе Велиж   
-                            </span>
-                        </a>
-                
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Savel.png);">
-                                <span class="card-title">
-                                    <h3>Петр Савельевич Василевский</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родился в 1922 
-                                    в поселке Семеновка   
-                            </span>
-                        </a>
-                
-                        <a class="card" href="#">
-                            <span class="card-header" style="background-image: url(images/Veinerovich.png);">
-                                <span class="card-title">
-                                    <h3>Иосиф Наумовоич Вейнярович</h3>
-                                </span>
-                            </span>
-                            <span class="card-summary">
-                                    Родился в 1909 
-                                    в городе Минск   
-                            </span>
-                        </a>
-                    </div>
-                </div>
-        </section>
+      <section>
+        <h1 class="rus">Кинорежисеры Беларуси</h1>
+        <h1 class="eng">Belorussian Movie Directors</h1>
+        <h1 class="bel">Кінарэжысёры Беларусі</h1>
+        <div class="container" id="cards">
+          <div class="form">
+            <input class="search" placeholder="Search" />
+            <button class="sort"><i class="fas fa-search"></i></button>
+          </div>
+          <ul class="cards list">
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Orlov.png)">
+                <a class="name rus" href="#">Владимир Александрович Орлов</a>
+                <a class="name bel" href="#">Уладзімір Аляксандравіч Арлоў</a>
+                <a class="name eng" href="#">Vladimir Orlov</a>
+              </h3>
+              <span class="card-summary rus"> Родился в 1938 в городе Гродно </span>
+              <span class="card-summary eng"> He was born in 1938 in Grodno </span>
+              <span class="card-summary bel"> Нарадзіўся ў 1938 у горадзе Гродна </span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Arshanski.png)">
+                <a class="name rus" href="./personal_pages/arshanski.html">Эдуард Львович Аршанский</a>
+                <a class="name bel" href="./personal_pages/arshanski.html">Эдуард Львовіч Аршанскі</a>
+                <a class="name eng" href="./personal_pages/arshanski.html">Eduard Arshansky</a>
+              </h3>
+              <span class="card-summary rus"> Родился в 1899 в городе Невель </span>
+              <span class="card-summary eng"> He was born in 1899 in Nevel </span>
+              <span class="card-summary bel"> Нарадзіўся ў 1899 у горадзе Невель </span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Victor_Asliuk.png)">
+                <a class="name rus" href="#">Виктор Николаевич Аслюк</a>
+                <a class="name bel" href="#">Віктар Мікалаевіч Аслюк</a>
+                <a class="name eng" href="#">Victor Asluk</a>
+              </h3>
+              <span class="card-summary rus"> Родился в 1961 в городе Минск </span>
+              <span class="card-summary eng"> He was born in 1961 in Minsk </span>
+              <span class="card-summary bel"> Нарадзіўся ў 1961 у горадзе Мінску </span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Belous.png)">
+                <a class="name rus" href="./personal_pages/belousov.html">Белоусов Олег Павлович</a>
+                <a class="name bel" href="./personal_pages/belousov.html">Алег Паўлавіч Белавусаў</a>
+                <a class="name eng" href="./personal_pages/belousov.html">Oleg Belousov</a>
+              </h3>
+              <span class="card-summary rus">Родился в 1945 в городе Слуцк</span>
+              <span class="card-summary eng">He was born in 1945 in Slutsk</span>
+              <span class="card-summary bel">Нарадзіўся ў 1945 у горадзе Слуцку</span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Berov.png)">
+                <a class="name rus" href="#">Моисей Залманович Беров</a>
+                <a class="name bel" href="#">Майсей Залманавіч Бераў</a>
+                <a class="name eng" href="#">Moisey Berov</a>
+              </h3>
+              <span class="card-summary rus">Родисля в 1909 в городе Велиж</span>
+              <span class="card-summary eng">He was born in 1909 in Velizh</span>
+              <span class="card-summary bel">Нарадзіўся ў 1909 у горадзе Вяліж</span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Savel.png)">
+                <a class="name rus" href="#">Петр Савельевич Василевский</a>
+                <a class="name bel" href="#">Пятро Савельевіч Васілеўскі</a>
+                <a class="name eng" href="#">Petr Vasilevskiy</a>
+              </h3>
+              <span class="card-summary rus">Родился в 1922 в поселке Семеновка</span>
+              <span class="card-summary eng">He was born in 1922 in Semenovka</span>
+              <span class="card-summary bel">Нарадзіўся ў 1922 у весцы Сямёнаўка</span>
+            </li>
+            <li class="card">
+              <h3
+                class="card-title card-header"
+                style="background-image: url(images/Veinerovich.png)">
+                <a class="name rus" href="#">Иосиф Наумовоич Вейнярович</a>
+                <a class="name bel" href="#">Іосіф Навумавіч Вейняровіч</a>
+                <a class="name eng" href="#">Iosif Veynyarovich</a>
+              </h3>
+              <span class="card-summary rus">Родился в 1909 в городе Минск </span>
+              <span class="card-summary eng"> He was born in 1909 in Minsk </span>
+              <span class="card-summary bel"> Нарадзіўся ў 1909 у горадзе Мінску </span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer></footer>
-
-</body>
-
+    <script src="./js/list.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
