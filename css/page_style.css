@@ -39,14 +39,23 @@ body.by span.bel {
   border: 1px solid #DDD;
   box-sizing: border-box;
 }
+
+
 nav {
-  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   background: #2c3849;
 }
 nav .back-to-list {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #FFF;
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+  cursor: pointer;
   text-decoration: none;
   transition: 0.5s;
 }
@@ -57,12 +66,22 @@ nav .back-to-list:hover {
 nav .back-to-list::before {
   content: "<<";
 }
-nav .language-switch {
-  position: absolute;
-  top: 5px;
-  right: 0;
-  background: grey;
+
+.language-switch {
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+  cursor: pointer;
 }
+
+.language-switch p {
+  padding: 7px;
+}
+
 h1 {
   display: flex;
   align-items: center;
