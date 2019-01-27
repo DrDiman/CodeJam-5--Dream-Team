@@ -9,7 +9,8 @@
   display: none;
 }
 body {
-  background-color: #aaa;
+  background: radial-gradient(circle at right, rgba(233, 241, 223, 0) 0.33333333em, #E9F1DF 0.33333333em, #E9F1DF 0.48888889em, rgba(233, 241, 223, 0) 0.48888889em, rgba(233, 241, 223, 0) 0.82222222em, #E9F1DF 0.82222222em, #E9F1DF 0.97777778em, rgba(233, 241, 223, 0) 0.97777778em, rgba(233, 241, 223, 0) 1.31111111em, #E9F1DF 1.31111111em, #E9F1DF 1.46666667em, rgba(233, 241, 223, 0) 1.46666667em) 0 0, radial-gradient(circle at left, rgba(233, 241, 223, 0) 0.57777778em, #E9F1DF 0.57777778em, #E9F1DF 0.73333333em, rgba(233, 241, 223, 0) 0.73333333em, rgba(233, 241, 223, 0) 1.06666667em, #E9F1DF 1.06666667em, #E9F1DF 1.22222222em, rgba(233, 241, 223, 0) 1.22222222em) 0 3.05146199em, linear-gradient(to right top, #E9F1DF 0.15555556em, rgba(233, 241, 223, 0) 0.15555556em) 1.22222222em 0.15555556em, linear-gradient(to left top, #E9F1DF 0.15555556em, rgba(233, 241, 223, 0) 0.15555556em) 1.22222222em 0.15555556em, linear-gradient(to right bottom, #E9F1DF 0.15555556em, rgba(233, 241, 223, 0) 0.15555556em) 1.22222222em 0.15555556em, linear-gradient(to left bottom, #E9F1DF 0.15555556em, rgba(233, 241, 223, 0) 0.15555556em) 1.22222222em 0.15555556em;
+  background-size: 2.8em 2.8em;
 }
 body.ru .rus {
   display: block;
@@ -35,6 +36,7 @@ body.by span.bel {
   max-width: 1000px;
   margin: auto;
   background-color: #FFF;
+  border: 1px solid #DDD;
 }
 nav {
   width: 100%;
@@ -63,6 +65,7 @@ nav .language-switch {
 h1 {
   display: flex;
   align-items: center;
+  word-break: break-word;
 }
 h1 img {
   margin: 10px;
@@ -78,6 +81,9 @@ section {
   margin-bottom: 30px;
   padding: 10px 10px 30px 10px;
   border-bottom: 1px dotted #AAA;
+}
+section:last-of-type {
+  margin-bottom: 0;
 }
 .timeline-container {
   display: flex;

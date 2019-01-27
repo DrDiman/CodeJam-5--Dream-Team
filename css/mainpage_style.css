@@ -91,6 +91,10 @@ body.by span.bel {
 
 .language-switch {
   grid-area: language;
+  padding: 0;
+}
+.language-switch p {
+  padding: 7px;
 }
 
 .mainTitle {
@@ -182,12 +186,17 @@ body.by span.bel {
 
 .random {
   grid-area: random;
+  width: 300px;
   padding: 10px;
   display: grid;
   justify-items: center;
   box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.random img {
+  object-fit: cover;
 }
 
 .random_director-title {
@@ -268,6 +277,9 @@ body.by span.bel {
   box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+.footer_title {
+  text-align: center;
 }
 
 @media (max-width: 700px) {

@@ -2,58 +2,43 @@ const pathToImages = 'images/';
 const pathToPages = 'personal_pages/';
 
 const directorsListRu = [
-  'Владимир Александрович Орлов',
-  'Артем Лобач Александрович',
-  'Эдуард Львович Аршанский',
-  'Виктор Николаевич Аслюк',
+  'Орлов Владимир Александрович',
+  'Лобач Артем Александрович',
+  'Аршанский Эдуард Львович',
   'Белоусов Олег Павлович',
-  'Моисей Залманович Беров',
-  'Петр Савельевич Василевский',
   'Иосиф Наумовоич Вейнярович'
 ];
 
 const directorsListBy = [
-  'Уладзімір Аляксандравіч Арлоў',
-  'Арцем Лобач Аляксандравіч',
-  'Эдуард Львовіч Аршанскі',
-  'Віктар Мікалаевіч Аслюк',
-  'Алег Паўлавіч Белавусаў',
-  'Майсей Залманавіч Бераў',
-  'Пятро Савельевіч Васілеўскі',
-  'Іосіф Навумавіч Вейняровіч'
+  'Арлоў Уладзімір Аляксандравіч',
+  'Лобач Арцем Аляксандравіч',
+  'Аршанскі Эдуард Львовіч',
+  'Белавусаў Алег Паўлавіч',
+  'Вейняровіч Іосіф Навумавіч'
 ];
 
 const directorsListEn = [
-  'Vladimir Alexandrovich Orlov',
-  'Artem Lobach Aleksandrovich',
-  'Edward Lvovich Arshansky',
-  'Viktor Nikolaevich Aslyuk',
+  'Orlov Vladimir Alexandrovich',
+  'Lobach Artem Aleksandrovich',
+  'Arshansky Edward Lvovich',
   'Belousov Oleg Pavlovich',
-  'Moisey Zalmanovich Berov',
-  'Petr Savelievich Vasilevsky',
-  'Iosif Naumovoich Veynyarovich'
+  'Veynyarovich Iosif Naumovoich'
 ]
 
 const directorsImgs = [
   'Orlov',
   'A-lobach',
   'Arshanski',
-  'Victor_Asliuk',
   'Belous',
-  'Berov',
-  'Savel',
   'Veinerovich'
 ]
 
 const directorsLinks = [
-  '#',
-  '#',
-  '#',
-  '#',
+  'orlov.html',
+  'lobach.html',
+  'arshanski.html',
   'belousov.html',
-  '#',
-  '#',
-  '#'
+  'veinerovich.html'
 ]
 
 const random_index = Math.floor(Math.random() * directorsListRu.length);
@@ -61,14 +46,16 @@ const director = document.querySelector('.random_director-title');
 const directorImg = document.querySelector('.random img');
 const directorLink = document.querySelector('.random a');
 
-director.textContent = directorsListRu[random_index];
-directorImg.setAttribute('src', `${pathToImages}${directorsImgs[random_index]}.png`);
-directorLink.setAttribute('href', `${pathToPages}${directorsLinks[random_index]}`);
+if(director)director.textContent = directorsListRu[random_index];
+if(directorImg)directorImg.setAttribute('src', `${pathToImages}${directorsImgs[random_index]}.png`);
+if(directorLink)directorLink.setAttribute('href', `${pathToPages}${directorsLinks[random_index]}`);
 
 function changeAuthorOfdayLang(lang){
-  switch (lang) {
-    case 'ru': director.textContent = directorsListRu[random_index]; break;
-    case 'by': director.textContent = directorsListBy[random_index]; break;
-    default : director.textContent = directorsListEn[random_index]; break;
+  if(director){
+    switch (lang) {
+      case 'ru': director.textContent = directorsListRu[random_index]; break;
+      case 'by': director.textContent = directorsListBy[random_index]; break;
+      default : director.textContent = directorsListEn[random_index]; break;
+    }
   }
 }
