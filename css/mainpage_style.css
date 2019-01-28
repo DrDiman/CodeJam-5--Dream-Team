@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 15px;
+  background: radial-gradient(circle at right, rgba(233, 241, 223, 0) 0.3333333333em, #E9F1DF 0.3333333333em, #E9F1DF 0.4888888889em, rgba(233, 241, 223, 0) 0.4888888889em, rgba(233, 241, 223, 0) 0.8222222222em, #E9F1DF 0.8222222222em, #E9F1DF 0.9777777778em, rgba(233, 241, 223, 0) 0.9777777778em, rgba(233, 241, 223, 0) 1.3111111111em, #E9F1DF 1.3111111111em, #E9F1DF 1.4666666667em, rgba(233, 241, 223, 0) 1.4666666667em) 0 0, radial-gradient(circle at left, rgba(233, 241, 223, 0) 0.5777777778em, #E9F1DF 0.5777777778em, #E9F1DF 0.7333333333em, rgba(233, 241, 223, 0) 0.7333333333em, rgba(233, 241, 223, 0) 1.0666666667em, #E9F1DF 1.0666666667em, #E9F1DF 1.2222222222em, rgba(233, 241, 223, 0) 1.2222222222em) 0 3.0514619883em, linear-gradient(to right top, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to left top, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to right bottom, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em, linear-gradient(to left bottom, #E9F1DF 0.1555555556em, rgba(233, 241, 223, 0) 0.1555555556em) 1.2222222222em 0.1555555556em;
+  background-size: 2.8em 2.8em;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, blockquote {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rus, .eng, .bel {
+  display: none;
+}
+
+body.ru .rus {
+  display: block;
+}
+
+body.ru span.rus {
+  display: inline;
+}
+
+body.en .eng {
+  display: block;
+}
+
+body.en span.eng {
+  display: inline;
+}
+
+body.by .bel {
+  display: block;
+}
+
+body.by span.bel {
+  display: inline;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 35px;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "title      title title" "navigation . language";
+  min-height: 50px;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav_authors, .nav_directors, .language-switch {
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+  cursor: pointer;
+}
+
+.language-switch {
+  grid-area: language;
+  padding: 0;
+}
+.language-switch p {
+  padding: 7px;
+}
+
+.mainTitle {
+  grid-area: title;
+  position: relative;
+  color: #FCF2E5;
+  background: rgb(44, 56, 73);
+  font-size: 2.0em;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px 40px;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.mainTitle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -15px;
+  background: rgb(44, 56, 73);
+}
+
+.mainTitle:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 80%;
+  border-top: 8px solid rgb(44, 56, 73);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  left: 50%;
+  border-radius: 0px 0px 25px 25px;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+
+.nav {
+  grid-area: navigation;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mainContent {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "description description random" "authors     authors     authors";
+}
+
+.description {
+  grid-area: description;
+  padding: 10px;
+  display: grid;
+  align-content: start;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.description_title {
+  text-align: center;
+  padding: 5px;
+}
+
+.description_text {
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.main_button {
+  justify-self: center;
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: rgb(44, 56, 73);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+}
+
+.main_button:hover, .nav_authors:hover, .nav_directors:hover, .language-switch:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 12px 0px;
+}
+
+.random {
+  grid-area: random;
+  width: 300px;
+  padding: 10px;
+  display: grid;
+  justify-items: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.random img {
+  object-fit: cover;
+}
+
+.random_director-title {
+  text-align: center;
+  padding: 5px;
+}
+
+.random_moreInfo {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: end;
+  background: rgb(44, 56, 73);
+  color: white;
+  padding: 3px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 0px;
+}
+
+.random:hover, .description:hover {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px 0px;
+}
+
+.authors {
+  grid-area: authors;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.authors_title {
+  text-align: center;
+  padding: 5px;
+}
+
+.authors_wrapContainer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+}
+
+.author {
+  display: grid;
+  justify-items: center;
+  padding: 10px;
+}
+
+.author:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.author_avatar {
+  border-radius: 50%;
+}
+
+.author_info {
+  display: grid;
+  justify-items: center;
+}
+
+.fa-github {
+  font-size: 25px;
+  color: black;
+}
+
+.author:hover .fa-github {
+  color: #6f42c1;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.footer_title {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .header {
+    grid-template-areas: "navigation language" "title title";
+    justify-content: center;
+  }
+  .mainContent {
+    grid-template-areas: "description" "random" "authors"
+  }
+}
