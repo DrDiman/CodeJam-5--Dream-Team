@@ -109,6 +109,7 @@ body.by span.bel {
 
 .language-switch {
   grid-area: language;
+  padding: 0;
 }
 
 .language-switch p {

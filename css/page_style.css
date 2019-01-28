@@ -70,7 +70,6 @@ nav .back-to-list::before {
 .language-switch {
   background: rgb(44, 56, 73);
   color: white;
-  padding: 7px;
   margin: 2px;
   text-align: center;
   border-radius: 5px;
